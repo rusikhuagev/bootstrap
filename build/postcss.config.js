@@ -7,6 +7,7 @@ module.exports = (ctx) => ({
     sourcesContent: true
   },
   plugins: {
-    autoprefixer: {}
+    autoprefixer: {},
+    'css-mqpacker': ctx.file.basename.endsWith('.min.css') ? {} : false
   }
 })
